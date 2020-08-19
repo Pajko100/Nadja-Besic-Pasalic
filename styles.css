@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
-  max-width: 100%;
+html, body { 
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -62,14 +62,7 @@ body {
   color: black;
 }
 
-.portfolio-items-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
-.portfolio-item-wrapper {
-  position: relative;
-}
 
 /*
 .portfolio-img-background {
@@ -177,6 +170,17 @@ body {
 }
 
 */
+
+.portfolio-items-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-rows: 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+  position: relative;
+}
+
 @media screen and (max-width: 768px){
   .portfolio-items-wrapper {
     display: grid;
@@ -187,12 +191,11 @@ body {
   }
 }
 .portfolio-img-background {
-  height: 400px;
+  height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: cover;
-  
+  background-size: 100% 100%;
 }
 
 /*
